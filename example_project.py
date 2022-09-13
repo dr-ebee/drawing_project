@@ -66,6 +66,19 @@ Draws 3 whiskers, starting with the top whisker
 def whiskers():
     forward(60)
     left(20)
+    # Draw each whisker a little bit longer than the previous one
+    for i in range(3):
+        down()
+        forward(whisker_length + i*10)
+        backward(whisker_length + i*10)
+        up()
+        right(90)
+        forward(20)
+        left(85)
+    up()
+    goto(-30, -80)
+    right(180)
+    # Draw each whisker a little bit longer than the previous one
     for i in range(3):
         down()
         forward(whisker_length + i*10)
